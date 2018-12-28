@@ -1,0 +1,32 @@
+﻿@model Lab_34.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Изменение данных о пользователе";
+    Layout = "_Layout";
+}
+
+<h2>Изменение данных о пользователе</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input asp-for="@Model.Email" type="email" class="form-control" placeholder="Email" value="@Model.Email" />
+    </div>
+    <div class="form-group">
+        <label for="UserName">Пользовательское имя</label>
+        <input asp-for="@Model.UserName" type="text" class="form-control" placeholder="Пользовательское имя" value="@Model.UserName" />
+    </div>
+    <div class="form-group">
+        <label for="LastName">Фамилия</label>
+        <input asp-for="@Model.LastName" type="text" class="form-control" placeholder="Фамилия" value="@Model.LastName" />
+    </div>
+    <div class="form-group">
+        <label for="FirstName">Имя</label>
+        <input asp-for="@Model.FirstName" type="text" class="form-control" placeholder="Имя" value="@Model.FirstName" />
+    </div>
+    <div class="form-group">
+        <label for="MiddleName">Отчество</label>
+        <input asp-for="@Model.MiddleName" type="text" class="form-control" placeholder="Отчество" value="@Model.MiddleName" />
+    </div>
+    <button type="submit" class="btn btn-success">Сохранить</button>
+</form>
