@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра в жизнь</title>
+    <style type="text/css">
+        p {
+			margin: 0;
+			padding: 0;
+		}
+		.header {
+			background: #FF892C;
+			height: 50px;
+		}
+		.header>p {
+			padding: 12px 0px 0px 20px;
+			font-size: 16pt;
+		}
+        .main {
+			max-width: 768px;
+			margin: 0 auto;
+		}
+        .footer {
+			width: 100%;
+			display: flex;
+		}
+        #game {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <p>Игра в жизнь</p>
+        </div>
+        <div>
+            <canvas id="game"></canvas> 
+            <script src="game.js" type="application/javascript"></script>
+        </div>
+        <div class="footer">
+            <button id="clear">Очистка</button>
+            <button id="generate">Генерация</button>
+            <button id="start-stop">Старт/стоп</button>
+            <p>Поколение: <p id="generation">0</p></p>
+        </div>
+    </div>
+</body>
+</html>
